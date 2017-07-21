@@ -51,5 +51,4 @@ production:
   <<: *default
   database: piece-of-cake_production
   username: root
-  password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
