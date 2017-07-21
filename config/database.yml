@@ -51,3 +51,4 @@ production:
   <<: *default
   database: piece-of-cake_production
   username: root
+  socket: /tmp/mysql.sock
