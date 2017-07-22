@@ -8,7 +8,7 @@
 |group_id|integer|null:false, foreign_key,index:true|
 |user_id |integer|null:false, foreign_key|
 
-###Association
+### Association
 belongs_to :user  
 belongs_to :group  
 
@@ -18,7 +18,7 @@ belongs_to :group
 |name    |string |index:true, null:false, unique:true|
 |email   |string |null:false, unique:true|
 
-###Association
+### Association
 has_many :groups, through: :groups_users  
 has_many :messages  
 has_many :groups_users  
@@ -28,7 +28,7 @@ has_many :groups_users
 |:------:|:-----:|:-----:|
 |name    |string |null:false、unique:true|
 
-###Association
+### Association
 has_many :users, through :groups_users  
 has_many :messages  
 
@@ -38,6 +38,6 @@ has_many :messages
 |user_id |integer|null:false, foreign_key|
 |group_id|integer|null:false, foreign_key|
 
-###Association
+### Association
 belongs_to :user  
 belongs_to :group  
