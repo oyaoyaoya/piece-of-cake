@@ -1,24 +1,43 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# DATA BASE設計
+## massages table
+|column  |type   |option |
+|:------:|:-----:|:-----:|
+|body    |text   |       |
+|image   |string |       |
+|group_id|integer|null:false, foreign_key,index:true|
+|user_id |integer|null:false, foreign_key|
 
-Things you may want to cover:
+### Association
+belongs_to :user  
+belongs_to :group  
 
-* Ruby version
+## users table
+|column  |type   |option |
+|:------:|:-----:|:-----:|
+|name    |string |index:true, null:false, unique:true|
+|email   |string |null:false, unique:true|
 
-* System dependencies
+### Association
+has_many :groups, through: :groups_users  
+has_many :messages  
+has_many :groups_users  
 
-* Configuration
+## groups table
+|column  |type   |option |
+|:------:|:-----:|:-----:|
+|name    |string |null:false、unique:true|
 
-* Database creation
+### Association
+has_many :users, through :groups_users  
+has_many :messages  
 
-* Database initialization
+## groups_users table
+|column  |type   |option |
+|:------:|:-----:|:-----:|
+|user_id |integer|null:false, foreign_key|
+|group_id|integer|null:false, foreign_key|
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Association
+belongs_to :user  
+belongs_to :group  
