@@ -14,7 +14,7 @@
 |introduction|text ||
 |card-information|interger ||
 
-###Association
+### Association
 has_many :notes, through: :note_users  
 has_many :comments  
 has_many :notes_users  
@@ -31,7 +31,7 @@ has_many :notes_users
 |fee     |interger||
 
 
-###Association
+### Association
 has_many :users, through :note_users  
 has_many :messages  
 has_many :notes_users  
@@ -42,7 +42,7 @@ has_many :notes_users
 |user_id |integer|null:false, foreign_key|
 |note_id |integer|null:false, foreign_key|
 
-###Association
+### Association
 belongs_to :user  
 belongs_to :group  
 
@@ -53,7 +53,7 @@ belongs_to :group
 |user_id |integer|null:false, foreign_key|
 |note_id|integer|null:false, foreign_key|
 
-###Association
+### Association
 belongs_to :user  
 belongs_to :note  
 
@@ -63,6 +63,6 @@ belongs_to :note
 |category_id|integer|null:false, foreign_key|
 |name    |string |null:false, foreign_key|
 
-###Association
+### Association
 belongs_to :group  
 
