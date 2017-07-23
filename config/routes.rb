@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  root "notes#index"
+  root to: "notes#index"
+  # resources :notes, only: [:index] do
 
 end
