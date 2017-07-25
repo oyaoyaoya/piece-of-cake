@@ -3,7 +3,101 @@
     %title NOTE
   %body
     .header
-      = render "header"
-      %p.header__text
-    .left__contents
-      / = render "shared/side_bar"
+      .header-inner
+        .header-icons
+          .header__homeicon
+            =image_tag "https://d2hi3epuv5qhwt.cloudfront.net/assets/renewal/logo-686748a91ffe9482590e92763abebe2bf85bab570839e4410ec4a8b14a484474.svg"
+            %ul
+              %li.header-right
+                .search-icon
+                  = fa_icon "fa-search", class: "fa fa-search"
+                .notification-icon
+                  = fa_icon "fa-bell", class: "fa fa-bell"
+                .avator-photo
+                  =image_tag "https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/4736047/profile_2538ba870146020f481dac42244d9045.jpg", class: "avator-photo"
+                .note-icon
+                  = fa_icon "fa-pencil-square-o", class: "fa fa-pencil-square-o", text: "ノートを投稿"
+      .categoryNavi
+        %ul
+          %li
+            %p.top
+              トップ
+            %p.recommend
+              おすすめ
+            %p.manga
+              マンガ
+            %p.column
+              コラム
+            %p.novel
+              小説
+            %p.photo
+              写真
+            %p.music
+              音楽
+          %li.naviSeparator
+
+          %li.hashtag
+            %p
+              ４コマ漫画
+          %li.hashtag
+            %p
+              グルメ
+          %li.hashtag
+            %p
+              育児
+          %li.hashtag
+            %p
+              日記
+          %li.hashtag
+            %p
+              料理
+
+
+  .time-line
+    .under-header
+    .hash-list
+      .btn-group
+        %ul
+          %li
+            .popular-button
+              人気
+            .new-button
+              新着
+    .feeds
+      .feeds__header
+        %ul.feed-header-icon
+          %li.user-icon
+            = image_tag "https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/3958988/profile_4428159bbd5d3e235bf471ab29dddce6.jpg", class: "feed-avator"
+          %li.user-name
+            服部半蔵
+          %li.time-zone
+            2017年7月31日
+          %li.fee
+            ￥500
+      .feeds__image
+        =image_tag "https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/4739655/rectangle_large_d9e3100f452477847178feda2fa73946.jpg", class: "timeline-image"
+      .feeds__title
+        フィードのたいとる。
+      .feeds__body
+        今日はGunosyの決算について、少し詳しく見てみたいと思います。
+
+        （Gunosyは決算期が5月期決算ということで、通常の会社と決算期がずれています。これはどうでも良いことかもしれませんが、個人的には決算期は3月6月9月12月の何れかにするのが、投資家にはフレンドリーだとは思います）
+
+        決算を見る前に、株価を少し見てみたいと思いますが、一時期1,000円を切る所まで来ていた株価が、現在では2,3...
+      .read-more
+        もっと見る
+      .hashtag
+        %ul.hashtag
+          %li.hashtag-list
+            view早く終わらしたい
+          %li.hashtag-list
+            でもview大事
+      .feeds__foot
+        %ul
+          %li
+            .like-button
+              = fa_icon "icon-star-empty", text: "9", class: "fa fa-star-o"
+          %li
+            .share-button
+              = fa_icon "fa-share-square",class: "fa fa-share-square"
+

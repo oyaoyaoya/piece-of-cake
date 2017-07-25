@@ -1,11 +1,319 @@
-header{
+body{
+    height: 100vh;
+    background-color: #F7F9F9;
 
 }
 
-.renewal-l-header {
-    background: #fff;
-    box-shadow: 0 0 1px rgba(0,0,0,0.15);
-    top: 0;
-    left: 0;
-    width: 100%;
+    .header{
+        background: #fff;
+        box-shadow: 0 0 1px rgba(0,0,0,0.15);
+        top: 0;
+        left: 0;
+        width: 100%;
+}
+
+      .header-inner{
+        align-items: center;
+        position: relative;
+        margin: 0 auto;
+        padding: 13px 0;
+        width: 940px;
+
+      }
+
+      .header-icons{
+        color: #333;
+
+      }
+
+      .header-homeicon{
+        // float: left;
+
+      }
+
+      ul{
+        float: right;
+      }
+
+      li {
+        // margin-left: 10px;
+      // padding-right: 10px;// display: inline;
+      }
+
+      .header-right{
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        // margin-right: 0px;
+        // float: right;
+ // display: inline;
+      }
+        .header-icon{
+            float: left;
+        }
+
+
+        .search-icon{
+            margin-right: 20px;
+            // margin-left: 10px;
+            // font-size: 0;
+            // cursor: pointer;
+        }
+
+        .notification-icon{
+            margin-right: 20px;
+            // margin-left: 10px;
+            // font-size: 0;
+            // cursor: pointer;
+        }
+
+        .avator-photo{
+            margin-right: 20px;
+            width: 36px;
+            height: 36px;
+            border-radius: 36px;
+        }
+
+        .note-icon{
+            border-color: #41B79B;
+            color: #fff;
+            background: #41B79B;
+            border: 1px solid #E8ECEB;
+            border-radius: 4px;
+            line-height: 1;
+            text-align: center;
+            font-size: 12px;
+            padding: 10px;
+        }
+
+      .categoryNavi{
+        position: relative;
+        margin: -1px auto 0 100px;
+        padding-top: 1px;
+        width: 940px;
+        border-top: 1px solid rgba(0,0,0,0.05);
+        background-color: #fff;
+        height: 50px;
+        width: 940px;
+      }
+
+    .categoryNavi li{
+        display: table-cell;
+        vertical-align: middle;
+
+      }
+
+      .categoryNavi p{
+        color: #717574;
+        display: block;
+        padding: 13px 13px;
+        font-size: 13px;
+        border-bottom: 2px solid transparent;
+        font-weight: bold;
+        float: left;
+      }
+
+      .categoryNavi p:hover{
+        color: #222222;
+        border-bottom: 2px solid #222222;
+      }
+
+
+      .hashtag p{
+        margin-right: 15px;
+        padding: 8px 10px;
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 1;
+        border-bottom: none;
+        border-radius: 4px;
+        color: #898D8C;
+        background: #F7F9F9;
+      }
+
+      .naviSeparator{
+        margin: 0 30px 0 15px;
+        padding: 13px 13px;
+        border-left: 1px solid rgba(0,0,0,0.05);
+        margin-top: 10px;
+        }
+
+  .time-line{
+    height: 100%;
+    background-color: #F7F9F9;
+    line-height: 1.5;
+    border-top: 1px;
+  }
+
+    .under-header{
+      height: 20px;
+    }
+    .hash-list{
+    width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+      .btn-group{
+        height: 30px;
+        margin-left: auto;
+        margin-bottom: 20px;
+        font-size: 14px;
+        display: inline-block;
+        height: 30px;
+      }
+
+      .btn-group:hover{
+        color: #41C9B4;
+      }
+
+     .popular-button {
+        line-height: 30px;
+        border: 5px #000;
+        // border-color: #bdc3c7;
+        padding: 0 15px;
+        border-right: none;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        color: black;
+        background-color: #fff;
+        float: left;
+      }
+     .popular-button:hover{
+        color: #41C9B4;
+      }
+      .new-button{
+        line-height: 30px;
+        border-color: red;
+        padding: 0 15px;
+        border: 1px;
+        border-right: none;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        color: black;
+        background-color: #fff;
+        float: left;
+      }
+      .new-button:hover{
+        color: #41C9B4;
+      }
+
+    .feeds{
+        min-height: 300px;
+        width: 580px;
+        margin: 0 auto;
+        padding: 0 20px 20px 20px;
+        border: 1px solid #E8ECEB;
+        border-radius: 3px;
+        background: #fff;
+
+
+      &__header{
+        padding: 20px;
+        background: #fff;
+        height: 30px;
+        }
+
+        .feed-header-icon{
+            float: left;
+        }
+
+            .feed-avator{
+                margin-right: 8px;
+                width: 36px;
+                height: 36px;
+                border-radius: 36px;
+                float: left;
+            }
+            .user-name{
+                float: left;
+                font-size: 12px;
+
+                }
+            .user-name:hover{
+                color: #41C9B4;
+            }
+
+            .time-zone{
+                float: left;
+                font-size: 12px;
+                clear: both;
+            }
+            .time-zone:hover{
+                color: #41C9B4;
+
+            }
+
+            .fee {
+                align-items: center;
+                color: #3DAD88;
+                background: transparent;
+                border: 1px solid #3DAD88;
+                border-radius: 4px;
+                line-height: 1;
+                padding: 0.5em 0.8em;
+                font-size: 14px;
+                margin-left: 290px;
+                float: right;
+            }
+            .timeline-image {
+                width: 100%;
+                height: auto;
+            }
+
+
+      &__title{
+        margin-bottom: 13px;
+        font-size: 20px;
+        line-height: 1.4;
+        letter-spacing: 0em;
+      }
+      &__title:hover{
+        color: #41C9B4;
+      }
+
+      &__body{
+        font-size: 14px;
+        line-height: 1.8;
+        color: #444444;
+        font-family: 'ヒラギノ角ゴ Pro W3';
+       }
+        .read-more{
+        color: #3BC49D;
+        display: block;
+        margin-top: 10px;
+        font-size: 12px;
+        }
+
+        .hashtag{
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-size: 12px;
+        color: #3BC49D;
+        float: left;
+        }
+
+        .hashtag-list{
+        float: left;
+        padding-right: 20px;
+      }
+
+    &__foot{
+        margin: 0 20px;
+        padding: 12px 0 15px 0;
+        border-top: 1px solid #E8ECEB;
+      }
+
+      .like-button{
+        font-size: 20px;
+        float: left;
+        color: #999;
+      }
+      .share-button{
+        font-size: 20px;
+        float: left;
+        color: #999;
+      }
+
 }
