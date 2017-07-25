@@ -15,9 +15,9 @@
 |card-information|interger ||
 
 ### Association
-has_many :notes, through: :note_users  
+has_many :notes, through: :paid_members  
 has_many :comments  
-has_many :notes_users  
+has_many :paid_members  
 
 ## notes table
 |column  |type   |option |
@@ -29,12 +29,14 @@ has_many :notes_users
 |image   |string||
 |url     |string||
 |fee     |interger||
+|category|text||
+
 
 
 ### Association
-has_many :users, through :note_users  
+has_many :users, through :paid_members  
 has_many :messages  
-has_many :notes_users  
+has_many :paid_members  
 
 ## paid_member table
 |column  |type   |option |
@@ -50,6 +52,9 @@ belongs_to :group
 ## magazine table
 |column  |type   |option |
 |:------:|:-----:|:-----:|
+|title   |text   ||
+|explanation|text||
+|fee     |integer||
 |user_id |integer|null:false, foreign_key|
 |note_id|integer|null:false, foreign_key|
 
@@ -57,54 +62,11 @@ belongs_to :group
 belongs_to :user  
 belongs_to :note  
 
-## category_note table
+## category table
 |column  |type   |option |
 |:------:|:-----:|:-----:|
 |category_id|integer|null:false, foreign_key|
-|name    |string |null:false, foreign_key|
+|note_id |integer|null:false, foreign_key|
 
 ### Association
-belongs_to :group  
-
-=======
-## massages table
-|column  |type   |option |
-|:------:|:-----:|:-----:|
-|body    |text   |       |
-|image   |string |       |
-|group_id|integer|null:false, foreign_key,index:true|
-|user_id |integer|null:false, foreign_key|
-
-### Association
-belongs_to :user  
-belongs_to :group  
-
-## users table
-|column  |type   |option |
-|:------:|:-----:|:-----:|
-|name    |string |index:true, null:false, unique:true|
-|email   |string |null:false, unique:true|
-
-### Association
-has_many :groups, through: :groups_users  
-has_many :messages  
-has_many :groups_users  
-
-## groups table
-|column  |type   |option |
-|:------:|:-----:|:-----:|
-|name    |string |null:false、unique:true|
-
-### Association
-has_many :users, through :groups_users  
-has_many :messages  
-
-## groups_users table
-|column  |type   |option |
-|:------:|:-----:|:-----:|
-|user_id |integer|null:false, foreign_key|
-|group_id|integer|null:false, foreign_key|
-
-### Association
-belongs_to :user  
 belongs_to :group  
