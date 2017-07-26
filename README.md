@@ -12,6 +12,7 @@
 |image  |string ||
 |header-image|string ||
 |introduction|text ||
+|magazine_id|integer|unique:true|
 |card-information|interger ||
 
 ### Association
@@ -23,6 +24,7 @@ has_many :paid_members
 |column  |type   |option |
 |:------:|:-----:|:-----:|
 |user_id |integer|null:false、unique:true|
+|magazine_id|integer|unique:true|
 |title   |text   ||
 |body    |text   ||
 |eyecatch-image|string||
@@ -43,6 +45,7 @@ has_many :paid_members
 |:------:|:-----:|:-----:|
 |user_id |integer|null:false, foreign_key|
 |note_id |integer|null:false, foreign_key|
+|magazine_id|integer|unique:true|
 
 ### Association
 belongs_to :user  

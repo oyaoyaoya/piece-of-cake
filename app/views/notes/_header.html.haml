@@ -1,3 +1,48 @@
-.header_inner
-  =image_tag "https://d2hi3epuv5qhwt.cloudfront.net/assets/renewal/logo-686748a91ffe9482590e92763abebe2bf85bab570839e4410ec4a8b14a484474.svg"
-.header_
+.header-inner
+  .header-icons
+    .header__homeicon
+      =image_tag "https://d2hi3epuv5qhwt.cloudfront.net/assets/renewal/logo-686748a91ffe9482590e92763abebe2bf85bab570839e4410ec4a8b14a484474.svg"
+      %ul
+        %li.header-right
+          .search-icon
+            = fa_icon "fa-search", class: "fa fa-search"
+          .notification-icon
+            = fa_icon "fa-bell", class: "fa fa-bell"
+          .avator-photo
+            =image_tag "https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/4736047/profile_2538ba870146020f481dac42244d9045.jpg", class: "avator-photo"
+          .note-icon
+            = fa_icon "fa-pencil-square-o", class: "fa fa-pencil-square-o", text: "ノートを投稿"
+  .categoryNavi
+    %ul
+      %li
+        %p.top
+          トップ
+        %p.recommend
+          おすすめ
+        %p.manga
+          マンガ
+        %p.column
+          コラム
+        %p.novel
+          小説
+        %p.photo
+          写真
+        %p.music
+          音楽
+      %li.naviSeparator
+
+      %li.hashtag
+        %p
+          ４コマ漫画
+      %li.hashtag
+        %p
+          グルメ
+      %li.hashtag
+        %p
+          育児
+      %li.hashtag
+        %p
+          日記
+      %li.hashtag
+        %p
+          料理
