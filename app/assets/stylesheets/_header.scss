@@ -322,17 +322,17 @@ body{
   .footer{
         margin-top: 20px;
         height:50px;
+        padding: 15px 0 40px 0;
     &__contents{
         margin: 0 auto;
         
     }
 
     ul{
-        
+        padding: 20px 0 25px 0;
         height: 20px;
         max-width: 1000px;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto;
     }
     li{
         display: inline-block;

@@ -1,0 +1,29 @@
+#account-page
+  .account-page__under
+  .account-page__header
+    %h2 Naka::note
+  .account-page__body
+    %h5 Naka::noteに登録する
+    .user-form
+      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        = devise_error_messages!
+        .field
+          .field-input
+            = f.email_field :email, autofocus: true, placeholder: "メールアドレス"
+        .field
+          .field-input
+            = f.password_field :password, autocomplete: "off", placeholder: "パスワード"
+
+        .field
+          .check-box
+            = f.check_box :agreement
+          .check-label
+            利用規約に同意する
+        .actions
+          = f.submit "登録する(無料)", class: 'btn'
+          = link to root_path
+        .log-in
+          = link_to "ログイン", new_user_session_path
+  .footer
+    = render "shared/footer"
+
