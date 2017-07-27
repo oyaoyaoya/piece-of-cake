@@ -10,7 +10,18 @@
             = fa_icon "fa-bell", class: "fa fa-bell"
           .avator-photo
             =image_tag "https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/4736047/profile_2538ba870146020f481dac42244d9045.jpg", class: "avator-photo"
+            %ul.menu
+              %li
+                .a マイページを表示
+              %li
+                .a Nakanoの部屋
+              %li
+                .a ナカトーーク
+              %li
+                = link_to destroy_user_session_path, method: :delete do
+                  ログアウト
           .note-icon
+            = link_to ""
             = fa_icon "fa-pencil-square-o", class: "fa fa-pencil-square-o", text: "ノートを投稿"
   .categoryNavi
     %ul

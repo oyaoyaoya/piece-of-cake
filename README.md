@@ -24,7 +24,6 @@ has_many :paid_members
 |column  |type   |option |
 |:------:|:-----:|:-----:|
 |user_id |integer|null:false、unique:true|
-|magazine_id|integer|unique:true|
 |title   |text   ||
 |body    |text   ||
 |eyecatch-image|string||
