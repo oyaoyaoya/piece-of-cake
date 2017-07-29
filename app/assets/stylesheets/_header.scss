@@ -12,9 +12,12 @@ body{
         width: 100%;
 
 }
-        .header-icons{
-            margin-bottom: 5px;
-        }
+       .header-icons{
+        color: #333;
+        margin-bottom: 5px;
+       
+      }
+
       .header-inner{
         align-items: center;
         position: relative;
@@ -24,11 +27,8 @@ body{
 
       }
 
-      .header-icons{
-        color: #333;
-      }
-
       .header-homeicon{
+         z-index: 10;
       }
 
       ul{
@@ -68,6 +68,7 @@ body{
         }
 
         .avator-photo{
+            z-index: 11;
             margin-right: 20px;
             width: 36px;
             height: 36px;
@@ -86,57 +87,58 @@ body{
             padding: 10px;
         }
 
-      .categoryNavi{
-        position: relative;
-        margin: -1px auto 0 -75px;
-        padding-top: 1px;
-        width: 940px;
-        border-top: 1px solid rgba(0,0,0,0.05);
-        background-color: #fff;
-        height: 50px;
-        width: 940px;
-      }
+          .categoryNavi{
+            z-index: 1;
+            position: relative;
+            margin: -1px auto 0 -75px;
+            padding-top: 1px;
+            width: 940px;
+            border-top: 1px solid rgba(0,0,0,0.05);
+            background-color: #fff;
+            height: 50px;
+            width: 940px;
+          }
 
-    .categoryNavi li{
-        display: table-cell;
-        vertical-align: middle;
+        .categoryNavi li{
+            display: table-cell;
+            vertical-align: middle;
 
-      }
+          }
 
-      .categoryNavi p{
-        color: #717574;
-        display: block;
-        padding: 13px 13px;
-        font-size: 13px;
-        border-bottom: 2px solid transparent;
-        font-weight: bold;
-        float: left;
-      }
+          .categoryNavi p{
+            color: #717574;
+            display: block;
+            padding: 13px 13px;
+            font-size: 13px;
+            border-bottom: 2px solid transparent;
+            font-weight: bold;
+            float: left;
+          }
 
-      .categoryNavi p:hover{
-        color: #222222;
-        border-bottom: 2px solid #222222;
-      }
+          .categoryNavi p:hover{
+            color: #222222;
+            border-bottom: 2px solid #222222;
+          }
 
 
-      .hashtag p{
-        margin-right: 15px;
-        padding: 8px 10px;
-        font-size: 12px;
-        font-weight: normal;
-        line-height: 1;
-        border-bottom: none;
-        border-radius: 4px;
-        color: #898D8C;
-        background: #F7F9F9;
-      }
+          .hashtag p{
+            margin-right: 15px;
+            padding: 8px 10px;
+            font-size: 12px;
+            font-weight: normal;
+            line-height: 1;
+            border-bottom: none;
+            border-radius: 4px;
+            color: #898D8C;
+            background: #F7F9F9;
+          }
 
-      .naviSeparator{
-        margin: 0 30px 0 15px;
-        padding: 13px 13px;
-        border-left: 1px solid rgba(0,0,0,0.05);
-        margin-top: 10px;
-        }
+          .naviSeparator{
+            margin: 0 30px 0 15px;
+            padding: 13px 13px;
+            border-left: 1px solid rgba(0,0,0,0.05);
+            margin-top: 10px;
+            }
 
   .time-line{
     background-color: #F7F9F9;

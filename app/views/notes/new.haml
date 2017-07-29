@@ -1,0 +1,24 @@
+= form_for(@note) do |f|
+  .body
+    .new-note
+      .new-note__header
+        %h2.logo
+          Naka::note
+          .new-post
+            =f.submit "投稿する", class: "post-button",data: { disable_with: "送信中..."}
+      .separator
+      .new-note__body
+        .note-container
+          .note-editor
+            .image-insert
+              .label
+                = f.label :eyechachImage, class: "insert-label" do
+                  = fa_icon "file-image-o"
+                = f.file_field :eyechachImage, class: "insert-icon"
+              .label-circle
+              %h1
+                = f.text_field :title, placeholder: "ノートタイトル", class: "note-title"
+              .label
+                = f.text_area :body, placeholder: "ノート本文", class: "note-body"
+
+
