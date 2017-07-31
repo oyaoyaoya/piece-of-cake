@@ -1,9 +1,9 @@
 = form_for(@note) do |f|
-  .body
+  .new-post-body
     .new-note
       .new-note__header
         %h2.logo
-          Naka::note
+          = link_to "Naka::note", root_path, method: :get
           .new-post
             =f.submit "投稿する", class: "post-button",data: { disable_with: "送信中..."}
       .separator
@@ -12,13 +12,11 @@
           .note-editor
             .image-insert
               .label
-                = f.label :eyechachImage, class: "insert-label" do
+                = f.label :eyecatchimage, class: "insert-label" do
                   = fa_icon "file-image-o"
-                = f.file_field :eyechachImage, class: "insert-icon"
+                = f.file_field :eyecatchimage, class: "insert-icon"
               .label-circle
               %h1
                 = f.text_field :title, placeholder: "ノートタイトル", class: "note-title"
               .label
                 = f.text_area :body, placeholder: "ノート本文", class: "note-body"
-
-

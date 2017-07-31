@@ -2,29 +2,36 @@
   .header-icons
     .header__homeicon
       =image_tag "https://d2hi3epuv5qhwt.cloudfront.net/assets/renewal/logo-686748a91ffe9482590e92763abebe2bf85bab570839e4410ec4a8b14a484474.svg"
-      %ul
-        %li.header-right
-          .search-icon
-            = fa_icon "fa-search", class: "fa fa-search"
-          .notification-icon
-            = fa_icon "fa-bell", class: "fa fa-bell"
-          .avator-photo
-            =image_tag "https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/4736047/profile_2538ba870146020f481dac42244d9045.jpg", class: "avator-photo"
-            %ul.menu
-              %li.name-id
-                YOURNAMEID
-              %li.sub-text
-                マイページを表示
-              %li.separator
-              %li.show-myroom
-                .a Nakanoの部屋
-              %li.log-out
-                = link_to destroy_user_session_path, method: :delete do
-                  ログアウト
-              .menu-triangle
-          .note-icon
-            = link_to new_note_path, method: :get do
-              = fa_icon "fa-pencil-square-o", class: "fa fa-pencil-square-o", text: "ノートを投稿"
+      - if user_signed_in?
+        %ul
+          %li.header-right
+            .search-icon
+              = fa_icon "fa-search", class: "fa fa-search"
+            .notification-icon
+              = fa_icon "fa-bell", class: "fa fa-bell"
+            .avator-photo
+              =image_tag "https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/4736047/profile_2538ba870146020f481dac42244d9045.jpg", class: "avator-photo"
+              %ul.menu
+                %li.name-id
+                  = link_to "New User", users_path
+                %li.sub-text
+                  マイページを表示
+                %li.separator
+                %li.show-myroom
+                  .a Nakanoの部屋
+                %li.log-out
+                  = link_to destroy_user_session_path, method: :delete do
+                    ログアウト
+                .menu-triangle
+            .note-icon
+              = link_to new_note_path, method: :get do
+                = fa_icon "fa-pencil-square-o", class: "fa fa-pencil-square-o", text: "ノートを投稿"
+      - else
+        %ul.new-user-sign
+          %li.login
+            = link_to "ログイン /", new_user_session_path
+          %li.signup
+            = link_to " 新規登録", new_user_registration_path
     .categoryNavi
       %ul
         %li
@@ -59,4 +66,3 @@
         %li.hashtag
           %p
             料理
-          

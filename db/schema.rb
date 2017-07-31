@@ -10,19 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170727091327) do
+ActiveRecord::Schema.define(version: 20170729072839) do
 
   create_table "notes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id",                     null: false
     t.string   "title",                       null: false
     t.text     "body",          limit: 65535
     t.string   "image"
-    t.string   "eyechachImage"
+    t.string   "eyecatchimage"
     t.string   "url"
     t.integer  "fee"
     t.integer  "category"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
+  end
+
+  create_table "paid_members", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "user_id"
+    t.integer  "note_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["note_id"], name: "index_paid_members_on_note_id", using: :btree
+    t.index ["user_id"], name: "index_paid_members_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -42,4 +51,6 @@ ActiveRecord::Schema.define(version: 20170727091327) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "paid_members", "notes"
+  add_foreign_key "paid_members", "users"
 end

@@ -4,4 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   validates :agreement, acceptance: true
+
+  has_many :notes, through: :paid_members
+  has_many :paid_members
 end

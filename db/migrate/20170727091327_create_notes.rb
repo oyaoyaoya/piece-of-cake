@@ -5,7 +5,7 @@ class CreateNotes < ActiveRecord::Migration[5.0]
       t.string :title, null:false
       t.text :body
       t.string :image
-      t.string :eyechachImage
+      t.string :eyecatchimage
       t.string :url
       t.integer :fee
       t.integer :category

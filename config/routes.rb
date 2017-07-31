@@ -4,5 +4,4 @@ Rails.application.routes.draw do
   root to: "notes#index"
   resources :users, only: [:index, :edit, :update]
   resources :notes, only: [:index, :new, :update, :create]
-
 end

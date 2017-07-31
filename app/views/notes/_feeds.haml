@@ -2,10 +2,10 @@
   %ul.feed-header-icon
     %li.user-icon
       = image_tag "https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/3958988/profile_4428159bbd5d3e235bf471ab29dddce6.jpg", class: "feed-avator"
-    %li.user-name
-      服部半蔵
-    %li.time-zone
-      2017年7月31日
+      %li.user-name
+        .p 服部半蔵
+      / %li.time-zone
+      /   .p 2017年7月31日
     %li.fee
       ￥500
 .feeds__image
@@ -13,20 +13,23 @@
 .feeds__title
   フィードのたいとる。
 .feeds__body
-  今日はGunosyの決算について、少し詳しく見てみたいと思います。
+  .body-text
+    今日はGunosyの決算について、少し詳しく見てみたいと思います。
 
-  （Gunosyは決算期が5月期決算ということで、通常の会社と決算期がずれています。これはどうでも良いことかもしれませんが、個人的には決算期は3月6月9月12月の何れかにするのが、投資家にはフレンドリーだとは思います）
+    （Gunosyは決算期が5月期決算ということで、通常の会社と決算期がずれています。これはどうでも良いことかもしれませんが、個人的には決算期は3月6月9月12月の何れかにするのが、投資家にはフレンドリーだとは思います）
 
-  決算を見る前に、株価を少し見てみたいと思いますが、一時期1,000円を切る所まで来ていた株価が、現在では2,3...
+    決算を見る前に、株価を少し見てみたいと思いますが、一時期1,000円を切る所まで来ていた株価が、現在では2,3...
   .read-more
     もっと見る
   .hashtag
-    %ul.hashtag
+    %ul
       %li.hashtag-list
         view早く終わらしたい
       %li.hashtag-list
         でもview大事
-  .feeds__foot
+
+.feeds__foot
+  .foot-action
     %ul
       %li
         .like-button
