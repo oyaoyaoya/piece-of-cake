@@ -1,7 +1,7 @@
 .header-inner
   .header-icons
     .header__homeicon
-      =image_tag "https://d2hi3epuv5qhwt.cloudfront.net/assets/renewal/logo-686748a91ffe9482590e92763abebe2bf85bab570839e4410ec4a8b14a484474.svg"
+      = link_to image_tag("https://d2hi3epuv5qhwt.cloudfront.net/assets/renewal/logo-686748a91ffe9482590e92763abebe2bf85bab570839e4410ec4a8b14a484474.svg"), root_path
       - if user_signed_in?
         %ul
           %li.header-right
@@ -13,7 +13,7 @@
               =image_tag "https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/4736047/profile_2538ba870146020f481dac42244d9045.jpg", class: "avator-photo"
               %ul.menu
                 %li.name-id
-                  = link_to "New User", users_path
+                  = link_to "New User", user_path(current_user)
                 %li.sub-text
                   マイページを表示
                 %li.separator

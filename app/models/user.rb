@@ -5,6 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   validates :agreement, acceptance: true
 
-  has_many :notes, through: :paid_members
+  has_many :notes
   has_many :paid_members
 end

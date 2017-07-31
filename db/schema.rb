@@ -13,8 +13,8 @@
 ActiveRecord::Schema.define(version: 20170729072839) do
 
   create_table "notes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "user_id",                     null: false
     t.string   "title",                       null: false
+    t.integer  "user_id",                     null: false
     t.text     "body",          limit: 65535
     t.string   "image"
     t.string   "eyecatchimage"

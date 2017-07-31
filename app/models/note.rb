@@ -2,7 +2,7 @@ class Note < ApplicationRecord
   mount_uploader :image, ImageUploader
   mount_uploader :eyecatchimage, ImageUploader
 
-  has_many :users, through: :paid_members
+  belongs_to :user
   has_many :paid_members
 
   validates :title, presence: true

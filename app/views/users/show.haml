@@ -46,30 +46,29 @@
           /   .p 2017年7月31日
         %li.fee
           ￥500
-    
-    .feeds__image
-      / = note.eyecatchimage
-      / , class: "timeline-image"
-    .feeds__title
-      / = note.title
-    .feeds__body
-      .body-text
-        / = note.body
-      .read-more
-        もっと見る
-      .hashtag
-        %ul
-          %li.hashtag-list
-            view早く終わらしたい
-          %li.hashtag-list
-            でもview大事
+      .feeds__image
+        = note.eyecatchimage
+        / , class: "timeline-image"
+      .feeds__title
+        = note.title
+      .feeds__body
+        .body-text
+          = note.body
+        / .read-more
+        /   もっと見る
+        .hashtag
+          %ul
+            %li.hashtag-list
+              view早く終わらしたい
+            %li.hashtag-list
+              でもview大事
 
-    .feeds__foot
-      .foot-action
-        %ul
-          %li
-            .like-button
-              = fa_icon "icon-star-empty", text: "9", class: "fa fa-star-o"
-          %li
-            .share-button
-              = fa_icon "fa-share-square",class: "fa fa-share-square"
+      .feeds__foot
+        .foot-action
+          %ul
+            %li
+              .like-button
+                = fa_icon "icon-star-empty", text: "9", class: "fa fa-star-o"
+            %li
+              .share-button
+                = fa_icon "fa-share-square",class: "fa fa-share-square"
