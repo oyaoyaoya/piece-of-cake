@@ -4,13 +4,12 @@
 ## users table
 |column  |type   |option |
 |:------:|:-----:|:-----:|
-|nickname|string |null:false, unique:true|
-|noteID  |integer|null:false, unique:true|
+|nickname|string ||
 |email   |string |null:false, unique:true|
 |password|string |null:false|
 |password-confirmation|string ||
 |image  |string ||
-|header-image|string ||
+|headerImage|string ||
 |introduction|text ||
 |magazine_id|integer|unique:true|
 |card-information|interger ||

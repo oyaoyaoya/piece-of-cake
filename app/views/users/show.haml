@@ -6,10 +6,10 @@
       =image_tag "https://metaphysicstsushin.files.wordpress.com/2016/03/matrix-wallpaper.jpg", class: "creator-topImage"
     .creator__content
       .creator__avator
-        = image_tag "https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/4736047/profile_2538ba870146020f481dac42244d9045.jpg", class: "profile-avator"
+        = image_tag "#{@user.image}", class: "profile-avator"
       .contentInner
         .creator-nameID
-          Tr.n031
+          = @user.nickname
         .creator-edit-btn
           設定
         .creator-list
@@ -34,14 +34,16 @@
   .pageContainer
     .pageContainer__main
 
-.feeds
-  .feeds__header
-    - @notes.each do |note|
+
+- @notes.each do |note|
+  .feeds
+    .feeds__header
       %ul.feed-header-icon
         %li.user-icon
-          = image_tag "https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/3958988/profile_4428159bbd5d3e235bf471ab29dddce6.jpg", class: "feed-avator"
+          = image_tag "#{@user.image}", class: "feed-avator"
           %li.user-name
-            .p 服部半蔵
+            .p
+              = @user.nickname
           / %li.time-zone
           /   .p 2017年7月31日
         %li.fee

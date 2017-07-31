@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 
 
   def show
+     @user = current_user
      @notes = current_user.notes
     
    end

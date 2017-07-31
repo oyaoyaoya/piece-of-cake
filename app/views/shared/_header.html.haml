@@ -10,7 +10,7 @@
             .notification-icon
               = fa_icon "fa-bell", class: "fa fa-bell"
             .avator-photo
-              =image_tag "https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/4736047/profile_2538ba870146020f481dac42244d9045.jpg", class: "avator-photo"
+              =image_tag "#{@user.image}", class: "avator-photo"
               %ul.menu
                 %li.name-id
                   = link_to "New User", user_path(current_user)
