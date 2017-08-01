@@ -5,10 +5,13 @@
     &__topImage{
     }
     .creator-topImage{
-      height: 300px;
+      height: 250px;
       width: 100%;
       margin: 0 auto;
+      overflow: hidden;
+      object-fit: none;
     }
+
     &__content{
       width: 940px;
       height: 110px;
@@ -57,9 +60,11 @@
         float: right;
         color: #349B76;
         margin-top: 20px;
-    //   padding-left: 2em;
-    // padding-right: 2em;
-    font-size: 12px;
+        font-size: 12px;
+        a{
+          text-decoration: none;
+          color: $note;
+        }
       }
       .creator-list{
         ul{

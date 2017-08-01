@@ -1,0 +1,165 @@
+body{
+  background-color: $white;
+
+.profile{
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+
+  .profileEdit{
+
+  &__header{
+    height: 160px;
+    background-color: $black;
+    opacity: .5;
+  }
+  .show-headerimage{
+    height: 160px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    object-fit: none;
+  }
+  .edit-headerimage{
+    cursor: pointer;
+  }
+  .profile-edit-icon{
+    text-align: center;
+    font-size: 40px;
+    color: $white;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    cursor: pointer;
+    .label{
+    text-align: center;
+    font-size: 40px;
+    color: $white;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 30px;
+    left: 350px;
+    cursor: pointer;
+    }
+    .p{
+    color: $white;
+    font-size: 15px;
+    // margin-top: 5px;
+    font-weight: bold;
+  }
+  }
+    .insert-headerimage{
+    display: none;
+  }
+
+  &__body{
+    width: 940px;
+    margin: 0 auto;
+    padding-top: 30px;
+    position: relative;
+    display: flex;
+  }
+  .profile-edit-avator{
+    margin-right: 20px;
+   
+  }
+  .profile-avator{
+    float: left;
+    width: 110px;
+    height: 110px;
+    border-radius: 110px;
+    opacity: .4;
+    cursor: pointer;
+
+  }
+  .edit-image{
+    float: left;
+    position: absolute;
+    left: 35px;
+    top: 55px;
+    font-size: 40px;
+    color: $white;
+    cursor: pointer;
+  }
+  .insert-image{
+        display: none;
+  }
+  .profile-edit-list{
+    width: 100%;
+  }
+  .edit-nickname{
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #e1e5e7;
+    border-radius: 5px;
+    height: 30px;
+    line-height: 30px;
+    padding: 5px 15px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    outline-color: $note;
+    outline-width: 2px;
+    outline-radius: 5px;
+  }
+  ::-webkit-input-placeholder{
+      color: $gray;
+      font-size: 14px;
+    }
+  .edit-introduction{
+    width: 100%;
+    height: 90px;
+    background-color: #fff;
+    border: 1px solid #e1e5e7;
+    border-radius: 5px;
+    line-height: 1;
+    padding: 5px 15px;
+    outline-color: $note;
+    outline-width: 2px;
+    outline-radius: 5px;
+  }
+   ::-webkit-input-placeholder{
+      color: $gray;
+
+    }
+}
+
+.profile-edit-button{
+    width: 1000px;
+    height: 50px;
+    margin: 0 auto;
+    text-align: right;
+    margin-bottom: 30px;
+    li{
+      display: inline-block;
+    }
+}
+  .cancel-btn{
+    display: inline-block;
+    padding: 0.7em 1em;
+    border: 1px solid $note;
+    border-radius: 4px;
+    font-size: 14px;
+    a{
+      text-decoration: none;
+      color: $note;
+      cursor: pointer;
+    }
+  }
+  .profile-edit-save-btn{
+    border-color: #41B79B;
+    color: #fff;
+    background: #41B79B;
+    padding: 0.7em 1em;
+    border: 1px solid $note;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+
+
+}
+}
+

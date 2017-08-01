@@ -3,7 +3,7 @@
     = render "shared/header"
   .creator
     .creator__topImage
-      =image_tag "https://metaphysicstsushin.files.wordpress.com/2016/03/matrix-wallpaper.jpg", class: "creator-topImage"
+      =image_tag "#{@user.headerImage}", class: "creator-topImage"
     .creator__content
       .creator__avator
         = image_tag "#{@user.image}", class: "profile-avator"
@@ -11,7 +11,7 @@
         .creator-nameID
           = @user.nickname
         .creator-edit-btn
-          設定
+          = link_to "設定", edit_user_path
         .creator-list
           %ul
             %li
@@ -49,7 +49,8 @@
         %li.fee
           ￥500
       .feeds__image
-        = note.eyecatchimage
+        - if note.eyecatchimage.present?
+          = image_tag "#{note.eyecatchimage}", class: "feeds-eyecatchimage-photo"
         / , class: "timeline-image"
       .feeds__title
         = note.title

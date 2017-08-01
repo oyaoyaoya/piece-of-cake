@@ -1,0 +1,32 @@
+= form_for(@user) do |f|
+  .body
+    .profile
+      .profileEdit
+        .profileEdit__header
+          .profile-header
+            .profile-edit-icon
+              = image_tag "#{@user.headerImage}", class: "show-headerimage"
+              .label
+                = f.label :headerimage, class: "edit-headerimage" do
+                  = fa_icon "camera-retro"
+                = f.file_field :headerimage, class: "insert-headerimage"
+                .p ヘッダー画像を追加
+        .profileEdit__body
+          .profile-edit-avator
+            = image_tag "#{@user.image}", class: "profile-avator"
+            .label
+              = f.label :image, class: "edit-image" do
+                = fa_icon "camera"
+              = f.file_field :image, class: "insert-image"
+          .profile-edit-list
+            .nickname-edit
+              = f.text_field :nickname, placeholder: "ニックネームを入力してください", class: "edit-nickname"
+            .introdution-edit
+              = f.text_area :introduction, placeholder: "あなたの意気込みを140字以内でどうぞ！", maxlength: "140", class: "edit-introduction"
+        .profile-edit-button
+          %ul
+            %li.cancel-btn
+              = link_to "キャンセル", "/users/current_user"
+            %li.save-btn
+              = f.submit "保存", class: "profile-edit-save-btn"
+  %i.fa.fa-bug
