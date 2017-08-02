@@ -1,0 +1,22 @@
+ .footer{
+    background-color: $gray;
+
+    &__contents{
+        width: 100%;
+        margin: 0 auto;
+        height:50px;
+        padding: 40px 0 40px 0;
+        ul{
+            width: 100%;
+        text-align: center;
+        line-height: 50px;
+        color: #ccc;
+        font-size: 12px;
+        }
+        li{
+            display: inline-block;
+            padding-right: 10px;
+
+        }
+    }
+}
