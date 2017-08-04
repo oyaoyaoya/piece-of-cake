@@ -3,15 +3,29 @@
     = render "shared/header"
   .creator
     .creator__topImage
-      =image_tag "#{@user.headerImage}", class: "creator-topImage"
+      - if @user.headerImage.present?
+        = image_tag "#{@user.headerImage}", class: "creator-topImage"
+      -else
+        = image_tag "http://userdisk.webry.biglobe.ne.jp/001/974/06/N000/000/001/123785800721916330266_3.24-1.jpg", class: "creator-topImage"
     .creator__content
       .creator__avator
-        = image_tag "#{@user.image}", class: "profile-avator"
+        - if @user.image.present?
+          = image_tag "#{@user.image}", class: "profile-avator"
+        - else
+          = image_tag "http://1.bp.blogspot.com/-OwZV0x1FJrs/UNQrdb_uppI/AAAAAAAAI7U/-iJhiSxVI7Q/s1600/mark_face_smile.png", class: "profile-avator"
       .contentInner
         .creator-nameID
-          = @user.nickname
-        .creator-edit-btn
-          = link_to "設定", edit_user_path
+          - if @user.nickname.present?
+            = @user.nickname
+          - else
+            .p.creator-nameID NEW USER
+          .creator-edit-btn
+            = link_to "設定", edit_user_path
+        .creator-introduction
+          - if @user.introduction.present?
+            = @user.introduction
+          - else
+            .p.creator-nameID NEW USER
         .creator-list
           %ul
             %li
@@ -40,10 +54,16 @@
     .feeds__header
       %ul.feed-header-icon
         %li.user-icon
-          = image_tag "#{@user.image}", class: "feed-avator"
+          - if @user.image.present?
+            = image_tag "#{@user.image}", class: "feed-avator"
+          -else
+            = image_tag "http://1.bp.blogspot.com/-OwZV0x1FJrs/UNQrdb_uppI/AAAAAAAAI7U/-iJhiSxVI7Q/s1600/mark_face_smile.png", class: "feed-avator"
           %li.user-name
-            .p
-              = @user.nickname
+            - if @user.image.present?
+              .p
+                = @user.nickname
+            - else
+              New user
           / %li.time-zone
           /   .p 2017年7月31日
         %li.fee
@@ -75,3 +95,4 @@
             %li
               .share-button
                 = fa_icon "fa-share-square",class: "fa fa-share-square"
+

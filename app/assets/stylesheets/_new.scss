@@ -29,8 +29,6 @@
 
   .new-post{
     float: right;
-  }
-  .post-button{
     margin-top: 10px;
     border-radius: 4px;
     text-align: center;
@@ -109,3 +107,128 @@
 }
 }
 }
+
+
+#modal-overlay{
+  z-index:2;
+  display:none;
+  position:fixed;
+  top:0;
+  // left:0;
+  width:100vw;
+  height:100vh;
+  background-color:rgba(0,0,0,0.75);
+  }
+  #modal-content{
+  width:480px;
+  height: 200px;
+  margin:1.5em auto 0;
+  background:#fff;
+  z-index:2;
+  position:fixed;
+  display:none;
+  top: 50px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  .modal-content-header{
+    width: 100%;
+    margin: 0 auto;
+    height: 50px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    font-size: 20px;
+    line-height: 48px;
+    background-color: #f8f9fa;
+    text-align: center;
+    
+    p{
+      // text-align: center;
+    }
+  }
+
+  .modal-content-body{
+    // // margin-left: 15px;
+    // // margin-right: 15px;
+    // padding: 55px 15px 25px 15px;
+    height: 98px;
+    padding-left: 20px;
+
+  }
+
+  .modal-content-footer{
+    width: auto;
+    height: 50px;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    background-color: #f8f9fa;
+    font-size: 12px;
+  }
+  .modal-content-footer-inner{
+    line-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
+    align-items: center;
+    // float: left
+    li{
+      display: inline-block;
+    }
+  }
+  .button-link{
+    float: left;
+  }
+  .public-btn{
+    height: 30px;
+    margin-left: 260px;
+    min-width: 100px;
+    display: inline-block;
+
+    padding: 0 10px;
+    border: 1px solid #41C9B4;
+    background-color: #41C9B4;
+    color: $white;
+    border-radius: 4px;
+
+  }
+
+  .note-public-setting{
+    display: flex;
+    margin: auto 0;
+    padding-top: 43px;
+  }
+  .note-fee-label{
+    padding-right: 20px;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  .radio-btn-free{
+    padding-right: 10px;
+    font-size: 12px;
+  }
+  .radio-btn-pay{
+    padding-right: 30px;
+    font-size: 12px;
+  }
+  .note-price-input{
+    height: 20px;
+    width: 120px;
+
+  }
+
+.modal-p:first-child{
+  margin-top:0;
+}
+
+.button-link{
+  color:#00f;
+  height: 50px;
+  width: 60px;
+  text-decoration:underline;
+}
+
+.button-link:hover{
+  cursor:pointer;
+  color:#f00;
+}
+}
+

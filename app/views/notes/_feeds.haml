@@ -1,13 +1,13 @@
 .feeds__header
-  %ul.feed-header-icon
-    %li.user-icon
+  .feed-header-icon
+    .user-icon
       = image_tag "https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/3958988/profile_4428159bbd5d3e235bf471ab29dddce6.jpg", class: "feed-avator"
-      %li.user-name
+    .note-profile-list
+      .user-name
         .p 服部半蔵
-      / %li.time-zone
-      /   .p 2017年7月31日
-    %li.fee
-      ￥500
+      .time-zone
+        .p 2017年7月31日
+    %script.payjp-button.fee{"data-key" => "pk_test_373aa241cae6bf20c7f5d3b8", src: "https://checkout.pay.jp", "data-text" => "500円"}
 .feeds__image
   =image_tag "https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/4739655/rectangle_large_d9e3100f452477847178feda2fa73946.jpg", class: "timeline-image"
 .feeds__title
@@ -37,3 +37,4 @@
       %li
         .share-button
           = fa_icon "fa-share-square",class: "fa fa-share-square"
+

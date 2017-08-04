@@ -23,7 +23,11 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.string :headerImage
       t.text :introduction
       t.integer :magazine_id
-
+      t.integer :cardNum
+      t.integer :month
+      t.integer :year
+      t.integer :cvc
+      t.integer :cardName
       ## Confirmable
       # t.string   :confirmation_token
       # t.datetime :confirmed_at

@@ -11,10 +11,16 @@
             .notification-icon
               = fa_icon "fa-bell", class: "fa fa-bell"
             .avator-photo
-              =image_tag "#{@user.image}", class: "avator-photo"
+              - if @user.image.present?
+                = image_tag "#{@user.image}", class: "avator-photo"
+              - else
+                = image_tag "http://1.bp.blogspot.com/-OwZV0x1FJrs/UNQrdb_uppI/AAAAAAAAI7U/-iJhiSxVI7Q/s1600/mark_face_smile.png", class: "avator-photo"
               %ul.menu
                 %li.name-id
-                  = link_to "New User", user_path(current_user)
+                  - if @user.nickname.present?
+                    = link_to "#{@user.nickname}", user_path(current_user)
+                  - else
+                    = link_to "New User", user_path(current_user)
                 %li.sub-text
                   マイページを表示
                 %li.separator

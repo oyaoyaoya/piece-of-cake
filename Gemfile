@@ -63,6 +63,7 @@ end
   gem 'font-awesome-rails'
   gem 'devise'
   gem 'unicorn'
+  gem 'payjp'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

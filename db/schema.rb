@@ -50,6 +50,11 @@ ActiveRecord::Schema.define(version: 20170729072839) do
     t.string   "headerImage"
     t.text     "introduction",           limit: 65535
     t.integer  "magazine_id"
+    t.integer  "cardNum"
+    t.integer  "month"
+    t.integer  "year"
+    t.integer  "cvc"
+    t.integer  "cardName"
     t.datetime "created_at",                                        null: false
     t.datetime "updated_at",                                        null: false
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree

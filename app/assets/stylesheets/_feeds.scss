@@ -1,7 +1,7 @@
    .feeds{
         min-height: 230px;
         width: 580px;
-        // margin-bottom: 20px;
+        margin-bottom: 20px;
         margin-left: auto;
         margin-right: auto;
         padding: 0 20px 20px 20px;
@@ -13,10 +13,11 @@
         padding: 20px;
         background: #fff;
         height: 30px;
+        width: 540px;
         }
 
         .feed-header-icon{
-            float: left;
+            display: flex;
         }
 
             .feed-avator{
@@ -24,29 +25,23 @@
                 width: 36px;
                 height: 36px;
                 border-radius: 36px;
-                float: left;
             }
             .user-name{
-                float: left;
                 font-size: 12px;
-                padding-top: 10px;
-
                 }
             .user-name:hover{
                 color: #41C9B4;
             }
 
-            // .time-zone{
-            //     float: left;
-            //     font-size: 12px;
-            //     clear: both;
-            // }
-            // .time-zone:hover{
-            //     color: #41C9B4;
+            .time-zone{
+                font-size: 12px;
+                clear: both;
+            }
+            .time-zone:hover{
+                color: #41C9B4;
 
-            // }
-
-            .fee {
+            }
+            #payjp_checkout_box input[type=button]{
                 align-items: center;
                 color: #3DAD88;
                 background: transparent;
@@ -55,7 +50,7 @@
                 line-height: 1;
                 padding: 0.5em 0.8em;
                 font-size: 14px;
-                margin-left: 500px;
+                margin-left: 335px;
                 margin-top: 10px;
             }
             .timeline-image {

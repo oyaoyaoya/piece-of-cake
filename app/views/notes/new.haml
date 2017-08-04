@@ -5,7 +5,7 @@
         %h2.logo
           = link_to "Naka::note", root_path, method: :get
           .new-post
-            =f.submit "投稿する", class: "post-button",data: { disable_with: "送信中..."}
+            .p 公開設定
       .separator
       .new-note__body
         .note-container
@@ -20,3 +20,29 @@
                 = f.text_field :title, placeholder: "ノートタイトル", class: "note-title"
               .label
                 = f.text_area :body, placeholder: "ノート本文", class: "note-body"
+  #modal-overlay
+  #modal-content
+    .modal-content-header
+      公開設定
+    .modal-content-body
+      .note-public-setting
+        .note-fee-label
+          販売価格
+        .radio-btn-free
+          無料
+          = radio_button 'page', 'category', 'rails_base', {}
+        .radio-btn-pay
+          有料
+          = radio_button 'page', 'category', 'rails_base', {}
+        .note-fee-input
+          = f.text_field :fee, class: "note-price-input"
+          円
+      .note-public-detail-setting
+    .modal-content-footer
+      .modal-content-footer-inner
+        %ul
+          %li
+            #modal-close.button-link キャンセル
+          %li
+            %a.note-public-btn
+              = f.submit "公開", class: "public-btn"

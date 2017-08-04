@@ -5,11 +5,12 @@
         .profileEdit__header
           .profile-header
             .profile-edit-icon
+              / - if @user.headerImage.present?
               = image_tag "#{@user.headerImage}", class: "show-headerimage"
               .label
-                = f.label :headerimage, class: "edit-headerimage" do
+                = f.label :headerImage, class: "edit-headerimage" do
                   = fa_icon "camera-retro"
-                = f.file_field :headerimage, class: "insert-headerimage"
+                = f.file_field :headerImage, class: "insert-headerimage"
                 .p ヘッダー画像を追加
         .profileEdit__body
           .profile-edit-avator
