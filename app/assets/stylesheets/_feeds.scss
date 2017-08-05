@@ -1,161 +1,173 @@
    .feeds{
-        min-height: 230px;
-        width: 580px;
-        margin-bottom: 20px;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0 20px 20px 20px;
-        border: 1px solid #E8ECEB;
-        border-radius: 3px;
-        background: #fff;
+        // min-height: 230px;
+        // width: 580px;
+        // margin-bottom: 20px;
+        // margin-left: auto;
+        // margin-right: auto;
+        // padding: 0 20px 20px 20px;
+        // border: 1px solid #E8ECEB;
+        // border-radius: 3px;
+        // background: #gray;
+    }
+        .feed-container{
+            background-color: #fff;
+            min-height: 230px;
+            width: 580px;
+            margin-bottom: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 20px 20px 20px;
+            border: 1px solid #E8ECEB;
+            border-radius: 3px;
 
-      &__header{
-        padding: 20px;
-        background: #fff;
-        height: 30px;
-        width: 540px;
-        }
-
-        .feed-header-icon{
-            display: flex;
-        }
-
-            .feed-avator{
-                margin-right: 8px;
-                width: 36px;
-                height: 36px;
-                border-radius: 36px;
+          &__header{
+            padding: 20px;
+            background: #fff;
+            height: 30px;
+            width: 540px;
             }
-            .user-name{
-                font-size: 12px;
+
+            .feed-header-icon{
+                display: flex;
+            }
+
+                .feed-avator{
+                    margin-right: 8px;
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 36px;
                 }
-            .user-name:hover{
-                color: #41C9B4;
-            }
+                .user-name{
+                    font-size: 12px;
+                    }
+                .user-name:hover{
+                    color: #41C9B4;
+                }
 
-            .time-zone{
-                font-size: 12px;
-                clear: both;
-            }
-            .time-zone:hover{
-                color: #41C9B4;
+                .time-zone{
+                    font-size: 12px;
+                    clear: both;
+                }
+                .time-zone:hover{
+                    color: #41C9B4;
 
-            }
-            .fee{
-                align-items: center;
-                color: #3DAD88;
-                background: transparent;
-                border: 1px solid #3DAD88;
-                border-radius: 4px;
-                line-height: 1;
-                padding: 0.5em 0.8em;
-                font-size: 14px;
-                margin-left: 335px;
-                margin-top: 10px;
-            }
-            #payjp_checkout_box input[type=button]{
-                align-items: center;
-                color: #3DAD88;
-                background: transparent;
-                border: 1px solid $note;
-                border-radius: 4px;
-                line-height: 1;
-                padding: 0.5em 0.8em;
-                font-size: 14px;
-                margin-left: 335px;
-                margin-top: 10px;
-            }
-            // .fee{
-            //     align-items: center;
-            //     color: #3DAD88;
-            //     background: transparent;
-            //     border: 1px solid #3DAD88;
-            //     border-radius: 4px;
-            //     line-height: 1;
-            //     padding: 0.5em 0.8em;
-            //     font-size: 14px;
-            //     margin-left: 335px;
-            //     margin-top: 10px;
-            // }
-            .note-price-input-invisible{
-                visibility: hidden;
-                border: none;
-            }
-            .timeline-image {
-                width: 100%;
-                height: auto;
-            }
-            .feeds-eyecatchimage-photo{
-                height: 160px;
-                width: 100%;
-                margin: 0 auto;
-                overflow: hidden;
-                object-fit: none;
-            }
-      &__title{
-        margin-top: 50px;
-        margin-bottom: 20px;
-        font-size: 20px;
-        line-height: 1.4;
-        letter-spacing: 0em;
-      }
-      &__title:hover{
-        color: #41C9B4;
-      }
+                }
+                .fee{
+                    align-items: center;
+                    color: #3DAD88;
+                    background: transparent;
+                    border: 1px solid #3DAD88;
+                    border-radius: 4px;
+                    line-height: 1;
+                    padding: 0.5em 0.8em;
+                    font-size: 14px;
+                    margin-left: 330px;
+                    margin-top: 10px;
+                }
+                #payjp_checkout_box input[type=button]{
+                    align-items: center;
+                    color: #3DAD88;
+                    background: transparent;
+                    border: 1px solid $note;
+                    border-radius: 4px;
+                    line-height: 1;
+                    padding: 0.5em 0.8em;
+                    font-size: 14px;
+                    margin-left: 330px;
+                    margin-top: 10px;
+                }
+                // .fee{
+                //     align-items: center;
+                //     color: #3DAD88;
+                //     background: transparent;
+                //     border: 1px solid #3DAD88;
+                //     border-radius: 4px;
+                //     line-height: 1;
+                //     padding: 0.5em 0.8em;
+                //     font-size: 14px;
+                //     margin-left: 335px;
+                //     margin-top: 10px;
+                // }
+                .note-price-input-invisible{
+                    visibility: hidden;
+                    border: none;
+                }
+                .timeline-image {
+                    width: 100%;
+                    height: auto;
+                }
+                .feeds-eyecatchimage-photo{
+                    height: 160px;
+                    width: 100%;
+                    margin: 0 auto;
+                    overflow: hidden;
+                    object-fit: none;
+                }
+          &__title{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 20px;
+            line-height: 1.4;
+            letter-spacing: 0em;
+          }
+          &__title:hover{
+            color: #41C9B4;
+          }
 
-      &__body{
-        font-size: 14px;
-        line-height: 1.8;
-        color: #444444;
-        font-family: 'ヒラギノ角ゴ Pro W3';
+          &__body{
+            font-size: 14px;
+            line-height: 1.8;
+            color: #444444;
+            font-family: 'ヒラギノ角ゴ Pro W3';
 
-        .read-more{
-        color: #3BC49D;
-        display: block;
-        margin-top: 10px;
-        font-size: 12px;
-        }
-
-        .hashtag{
-            height: 20px;
-            width: 100%;
-        ul{
-            display: block;
-            margin-top: 15px;
-            margin-bottom: 15px;
-            font-size: 12px;
+            .read-more{
             color: #3BC49D;
-            float: left;
+            display: block;
+            margin-top: 10px;
+            font-size: 12px;
+            }
 
-        }
-        li{
-        float: left;
-        padding-right: 20px;
-      }
-  }
-}
-    &__foot{
-        margin-top: 40px;
-        padding: 12px 0 15px 0;
-        border-top: 1px solid #E8ECEB;
-        width: 100%;
-        height: 50px;
-        .foot-action{
-            float: left;
+            .hashtag{
+                height: 20px;
+                width: 100%;
+            ul{
+                display: block;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                font-size: 12px;
+                color: #3BC49D;
+                float: left;
+
             }
             li{
-                float: left;
-                padding-right: 20px;
-            }
-          .like-button{
-            font-size: 20px;
             float: left;
-            color: #999;
+            padding-right: 20px;
           }
+      }
+    }
+        &__foot{
+            margin-top: 40px;
+            padding: 12px 0 15px 0;
+            border-top: 1px solid #E8ECEB;
+            width: 100%;
+            height: 10px;
+            .foot-action{
+                float: left;
+                }
+                li{
+                    float: left;
+                    padding-right: 20px;
+                }
+              .like-button{
+                font-size: 20px;
+                float: left;
+                color: #999;
+              }
 
-          .share-button{
-            font-size: 20px;
-            color: #999;
-          }
-}
-}
+              .share-button{
+                font-size: 20px;
+                color: #999;
+              }
+    }
+    }
+

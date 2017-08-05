@@ -1,42 +1,49 @@
-.feeds__header
-  .feed-header-icon
-    .user-icon
-      = image_tag "https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/3958988/profile_4428159bbd5d3e235bf471ab29dddce6.jpg", class: "feed-avator"
-    .note-profile-list
-      .user-name
-        .p 服部半蔵
-      .time-zone
-        .p 2017年7月31日
-    = form_tag(action: :purchase, method: :post) do
-      %script.payjp-button{"data-key" => "#{PAYJP_PUBLIC_KEY}", :src => "https://checkout.pay.jp", :type => "text/javascript"}
+- @notes.each do |note|
+  .feed-container
+    .feed-container__header
+      .feed-header-icon
+        .user-icon
+          - if note.user.image.present?
+            = image_tag "#{note.user.image}", class: "feed-avator"
+          -else
+            = image_tag "http://1.bp.blogspot.com/-OwZV0x1FJrs/UNQrdb_uppI/AAAAAAAAI7U/-iJhiSxVI7Q/s1600/mark_face_smile.png", class: "feed-avator"
+        .note-profile-list
+          .user-name
+            - if note.user.nickname.present?
+              .p
+                = note.user.nickname
+            - else
+              New user
+          .time-zone
+            .p
+              = note.created_at.strftime("%Y年%m月%d日")
+        = form_tag(action: :purchase, method: :post) do
+          %script.payjp-button{"data-key" => "#{PAYJP_PUBLIC_KEY}", :src => "https://checkout.pay.jp", :type => "text/javascript","data-text" => "500円"}
 
-.feeds__image
-  =image_tag "https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/4739655/rectangle_large_d9e3100f452477847178feda2fa73946.jpg", class: "timeline-image"
-.feeds__title
-  フィードのたいとる。
-.feeds__body
-  .body-text
-    今日はGunosyの決算について、少し詳しく見てみたいと思います。
+    .feed-container__image
+      - if note.image.present?
+        =image_tag "#{note.image}", class: "timeline-image"
+    .feed-container__title
+      = note.title
+    .feed-container__body
+      .body-text
+        = note.body
+      .read-more
+        もっと見る
+      .hashtag
+        %ul
+          %li.hashtag-list
+            view早く終わらしたい
+          %li.hashtag-list
+            でもview大事
 
-    （Gunosyは決算期が5月期決算ということで、通常の会社と決算期がずれています。これはどうでも良いことかもしれませんが、個人的には決算期は3月6月9月12月の何れかにするのが、投資家にはフレンドリーだとは思います）
-
-    決算を見る前に、株価を少し見てみたいと思いますが、一時期1,000円を切る所まで来ていた株価が、現在では2,3...
-  .read-more
-    もっと見る
-  .hashtag
-    %ul
-      %li.hashtag-list
-        view早く終わらしたい
-      %li.hashtag-list
-        でもview大事
-
-.feeds__foot
-  .foot-action
-    %ul
-      %li
-        .like-button
-          = fa_icon "icon-star-empty", text: "9", class: "fa fa-star-o"
-      %li
-        .share-button
-          = fa_icon "fa-share-square",class: "fa fa-share-square"
+    .feed-container__foot
+      .foot-action
+        %ul
+          %li
+            .like-button
+              = fa_icon "icon-star-empty", text: "9", class: "fa fa-star-o"
+          %li
+            .share-button
+              = fa_icon "fa-share-square",class: "fa fa-share-square"
 
