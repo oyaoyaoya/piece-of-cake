@@ -20,6 +20,11 @@ body{
     overflow: hidden;
     object-fit: none;
   }
+  .show-header-default{
+    height: 160px;
+    width: 100%;
+    background-color: $note;
+  }
   .edit-headerimage{
     cursor: pointer;
   }
@@ -71,6 +76,7 @@ body{
     border-radius: 110px;
     opacity: .4;
     cursor: pointer;
+    overflow: hidden;
 
   }
   .edit-image{
@@ -79,7 +85,7 @@ body{
     left: 35px;
     top: 55px;
     font-size: 40px;
-    color: $white;
+    color: $black;
     cursor: pointer;
   }
   .insert-image{

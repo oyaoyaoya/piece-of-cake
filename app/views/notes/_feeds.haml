@@ -7,7 +7,9 @@
         .p 服部半蔵
       .time-zone
         .p 2017年7月31日
-    %script.payjp-button.fee{"data-key" => "pk_test_373aa241cae6bf20c7f5d3b8", src: "https://checkout.pay.jp", "data-text" => "500円"}
+    = form_tag(action: :purchase, method: :post) do
+      %script.payjp-button{"data-key" => "#{PAYJP_PUBLIC_KEY}", :src => "https://checkout.pay.jp", :type => "text/javascript"}
+
 .feeds__image
   =image_tag "https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/4739655/rectangle_large_d9e3100f452477847178feda2fa73946.jpg", class: "timeline-image"
 .feeds__title

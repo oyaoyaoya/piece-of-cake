@@ -6,7 +6,7 @@
       - if @user.headerImage.present?
         = image_tag "#{@user.headerImage}", class: "creator-topImage"
       -else
-        = image_tag "http://userdisk.webry.biglobe.ne.jp/001/974/06/N000/000/001/123785800721916330266_3.24-1.jpg", class: "creator-topImage"
+        = image_tag "", class: "creator-topImage"
     .creator__content
       .creator__avator
         - if @user.image.present?
@@ -53,7 +53,7 @@
   .feeds
     .feeds__header
       %ul.feed-header-icon
-        %li.user-icon
+        %li.feed-avator
           - if @user.image.present?
             = image_tag "#{@user.image}", class: "feed-avator"
           -else
@@ -67,7 +67,12 @@
           / %li.time-zone
           /   .p 2017年7月31日
         %li.fee
-          ￥500
+          - if note.fee.present?
+            ¥
+            = note.fee
+          - else
+            = image_tag "", class: "note-price-input-invisible"
+
       .feeds__image
         - if note.eyecatchimage.present?
           = image_tag "#{note.eyecatchimage}", class: "feeds-eyecatchimage-photo"

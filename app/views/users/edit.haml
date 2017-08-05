@@ -5,20 +5,34 @@
         .profileEdit__header
           .profile-header
             .profile-edit-icon
-              / - if @user.headerImage.present?
-              = image_tag "#{@user.headerImage}", class: "show-headerimage"
-              .label
-                = f.label :headerImage, class: "edit-headerimage" do
-                  = fa_icon "camera-retro"
-                = f.file_field :headerImage, class: "insert-headerimage"
-                .p ヘッダー画像を追加
+              - if @user.headerImage.present?
+                = image_tag "#{@user.headerImage}", class: "show-headerimage"
+                .label
+                  = f.label :headerImage, class: "edit-headerimage" do
+                    = fa_icon "camera-retro"
+                  = f.file_field :headerImage, class: "insert-headerimage"
+                  .p ヘッダー画像を追加
+              - else
+                = image_tag "", class: "show-header-default"
+                .label
+                  = f.label :headerImage, class: "show-header-default" do
+                    = fa_icon "camera-retro"
+                  = f.file_field :headerImage, class: "insert-headerimage"
+                  .p ヘッダー画像を追加
         .profileEdit__body
           .profile-edit-avator
-            = image_tag "#{@user.image}", class: "profile-avator"
-            .label
-              = f.label :image, class: "edit-image" do
-                = fa_icon "camera"
-              = f.file_field :image, class: "insert-image"
+            - if @user.image.present?
+              = image_tag "#{@user.image}", class: "profile-avator"
+              .label
+                = f.label :image, class: "edit-image" do
+                  = fa_icon "camera"
+                = f.file_field :image, class: "insert-image"
+            -else
+              = image_tag "http://1.bp.blogspot.com/-OwZV0x1FJrs/UNQrdb_uppI/AAAAAAAAI7U/-iJhiSxVI7Q/s1600/mark_face_smile.png", class: "profile-avator"
+              .label
+                = f.label :image, class: "edit-image" do
+                  = fa_icon "camera"
+                = f.file_field :image, class: "insert-image"
           .profile-edit-list
             .nickname-edit
               = f.text_field :nickname, placeholder: "ニックネームを入力してください", class: "edit-nickname"

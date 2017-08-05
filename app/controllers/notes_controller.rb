@@ -1,7 +1,7 @@
 class NotesController < ApplicationController
 
   def index
-    @user = current_user
+    @notes = Note.all
   end
 
   def new
@@ -11,20 +11,17 @@ class NotesController < ApplicationController
   def create
   @note = current_user.notes.new(note_params)
     if @note.save
-      redirect_to root_path
+      redirect_to root_path, notice: "noteを作成しました"
     else
-      flash.now[:alert] = "メッセージを入力してください"
+      flash.now[:alert] = "タイトルを入力してください"
       render = "new"
     end
   end
 
-  def pay
-    Payjp.api_key = 'sk_test_393becdb0fa54e3a64c80301'
-    charge = Payjp::Charge.create(
-    amount: "100",
-    card: params['payjp-token'],
-    currency: 'jpy',
-      )
+  def purchase
+    Payjp.api_key = PAYJP_SECRET_KEY
+    Payjp::Charge.create(currency: 'jpy', amount: 1000, card: params['payjp-token'])
+    redirect_to root_path, notice: "支払いが完了しました"
   end
 
   private

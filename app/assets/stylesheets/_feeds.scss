@@ -41,7 +41,7 @@
                 color: #41C9B4;
 
             }
-            #payjp_checkout_box input[type=button]{
+            .fee{
                 align-items: center;
                 color: #3DAD88;
                 background: transparent;
@@ -52,6 +52,34 @@
                 font-size: 14px;
                 margin-left: 335px;
                 margin-top: 10px;
+            }
+            #payjp_checkout_box input[type=button]{
+                align-items: center;
+                color: #3DAD88;
+                background: transparent;
+                border: 1px solid $note;
+                border-radius: 4px;
+                line-height: 1;
+                padding: 0.5em 0.8em;
+                font-size: 14px;
+                margin-left: 335px;
+                margin-top: 10px;
+            }
+            // .fee{
+            //     align-items: center;
+            //     color: #3DAD88;
+            //     background: transparent;
+            //     border: 1px solid #3DAD88;
+            //     border-radius: 4px;
+            //     line-height: 1;
+            //     padding: 0.5em 0.8em;
+            //     font-size: 14px;
+            //     margin-left: 335px;
+            //     margin-top: 10px;
+            // }
+            .note-price-input-invisible{
+                visibility: hidden;
+                border: none;
             }
             .timeline-image {
                 width: 100%;

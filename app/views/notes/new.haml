@@ -35,7 +35,7 @@
           有料
           = radio_button 'page', 'category', 'rails_base', {}
         .note-fee-input
-          = f.text_field :fee, class: "note-price-input"
+          = f.number_field :fee, class: "note-price-input"
           円
       .note-public-detail-setting
     .modal-content-footer
