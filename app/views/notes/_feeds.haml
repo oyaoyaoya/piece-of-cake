@@ -21,15 +21,15 @@
           %script.payjp-button{"data-key" => "#{PAYJP_PUBLIC_KEY}", :src => "https://checkout.pay.jp", :type => "text/javascript","data-text" => "500円"}
 
     .feed-container__image
-      - if note.image.present?
-        =image_tag "#{note.image}", class: "timeline-image"
+      - if note.eyecatchimage.present?
+        = image_tag "#{note.eyecatchimage}", class: "timeline-image"
     .feed-container__title
       = note.title
     .feed-container__body
       .body-text
         = note.body
       .read-more
-        もっと見る
+        = link_to "もっと見る", note_path(note.id)
       .hashtag
         %ul
           %li.hashtag-list

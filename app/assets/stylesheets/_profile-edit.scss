@@ -50,7 +50,6 @@ body{
     .p{
     color: $white;
     font-size: 15px;
-    // margin-top: 5px;
     font-weight: bold;
   }
   }
@@ -108,6 +107,7 @@ body{
     outline-color: $note;
     outline-width: 2px;
     outline-radius: 5px;
+    float: left;
   }
   ::-webkit-input-placeholder{
       color: $gray;
@@ -126,7 +126,7 @@ body{
     outline-radius: 5px;
   }
    ::-webkit-input-placeholder{
-      color: $gray;
+      color: #C0C0C0;
 
     }
 }

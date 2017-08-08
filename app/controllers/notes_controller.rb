@@ -1,7 +1,7 @@
 class NotesController < ApplicationController
 
   def index
-    @notes = Note.all
+    @notes = Note.order("created_at DESC")
   end
 
   def new
@@ -16,6 +16,10 @@ class NotesController < ApplicationController
       flash.now[:alert] = "タイトルを入力してください"
       render = "new"
     end
+  end
+
+  def show
+    @note = Note.find(params[:id])
   end
 
   def purchase

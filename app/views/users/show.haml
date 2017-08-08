@@ -14,18 +14,17 @@
         - else
           = image_tag "http://1.bp.blogspot.com/-OwZV0x1FJrs/UNQrdb_uppI/AAAAAAAAI7U/-iJhiSxVI7Q/s1600/mark_face_smile.png", class: "profile-avator"
       .contentInner
-        .creator-nameID
-          - if @user.nickname.present?
-            = @user.nickname
-          - else
-            .p.creator-nameID NEW USER
+        .creator-header-list
+          .creator-nameID
+            - if @user.nickname.present?
+              = @user.nickname
+            - else
+              .p.creator-nameID NEW USER
           .creator-edit-btn
             = link_to "設定", edit_user_path
         .creator-introduction
           - if @user.introduction.present?
             = @user.introduction
-          - else
-            .p.creator-nameID NEW USER
         .creator-list
           %ul
             %li
