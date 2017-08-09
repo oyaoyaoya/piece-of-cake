@@ -1,0 +1,70 @@
+
+.feed-container
+  .feed-container__header
+    .feed-header-icon
+      .user-icon
+        - if @note.user.image.present?
+          = image_tag "#{note.user.image}", class: "feed-avator"
+        -else
+          = image_tag "http://1.bp.blogspot.com/-OwZV0x1FJrs/UNQrdb_uppI/AAAAAAAAI7U/-iJhiSxVI7Q/s1600/mark_face_smile.png", class: "feed-avator"
+      .note-profile-list
+        .user-name
+          - if @note.user.nickname.present?
+            .p
+              = @note.user.nickname
+          - else
+            New user
+        .time-zone
+          .p
+            = @note.created_at.strftime("%Y年%m月%d日")
+      / = form_tag(action: :purchase, method: :post) do
+      /   %script.payjp-button{"data-key" => "#{PAYJP_PUBLIC_KEY}", :src => "https://checkout.pay.jp", :type => "text/javascript","data-text" => "500円"}
+
+  .feed-container__image
+    - if @note.eyecatchimage.present?
+      =image_tag "#{@note.eyecatchimage}", class: "timeline-image"
+  .feed-container__title
+    = @note.title
+  .feed-container__body
+    .body-text
+      = @note.body
+    .note-paywall
+      .note-paywall-container
+        .note-paywall-container__header
+          %span この続きをみるには
+        .note-paywall-container__buynote
+          %span ノートを購入する
+        .note-paywall-container__main
+          .buynote-image
+            = image_tag "#{@note.eyecatchimage}", class: "buynote-eyecatchimage"
+          .buynote-list
+            .buynote-title
+              = @note.title
+            .buynote-nickname
+              - if @note.user.nickname.present?
+                = @note.user.nickname
+              - else
+                New User
+            .buynote-fee
+              ¥
+              = @note.fee
+          .buynote-btn
+            = form_tag(action: :purchase, method: :post, class: "buynote-btn-class") do
+              %script.payjp-button{"data-key" => "#{PAYJP_PUBLIC_KEY}", :src => "https://checkout.pay.jp", :type => "text/javascript","data-text" => "購入して続きを見る"}
+    .hashtag
+      %ul
+        %li.hashtag-list
+          view早く終わらしたい
+        %li.hashtag-list
+          でもview大事
+
+  .feed-container__foot
+    .foot-action
+      %ul
+        %li
+          .like-button
+            = fa_icon "icon-star-empty", text: "9", class: "fa fa-star-o"
+        %li
+          .share-button
+            = fa_icon "fa-share-square",class: "fa fa-share-square"
+

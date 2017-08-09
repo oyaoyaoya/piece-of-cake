@@ -1,15 +1,14 @@
    .feeds{
-        // min-height: 230px;
-        // width: 580px;
-        // margin-bottom: 20px;
-        // margin-left: auto;
-        // margin-right: auto;
-        // padding: 0 20px 20px 20px;
-        // border: 1px solid #E8ECEB;
-        // border-radius: 3px;
-        // background: #gray;
+        min-height: 230px;
+        width: 580px;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 20px 20px 20px;
+        border-radius: 3px;
+        background: #gray;
     }
-        .feed-container{
+        .feeds-container{
             background-color: #fff;
             min-height: 230px;
             width: 580px;
@@ -27,11 +26,11 @@
             width: 540px;
             }
 
-            .feed-header-icon{
+            .feeds-header-icon{
                 display: flex;
             }
 
-                .feed-avator{
+                .feeds-avator{
                     margin-right: 8px;
                     width: 36px;
                     height: 36px;
@@ -64,18 +63,20 @@
                     margin-left: 330px;
                     margin-top: 10px;
                 }
-                #payjp_checkout_box input[type=button]{
-                    align-items: center;
-                    color: #3DAD88;
-                    background: transparent;
-                    border: 1px solid $note;
-                    border-radius: 4px;
-                    line-height: 1;
-                    padding: 0.5em 0.8em;
-                    font-size: 14px;
-                    margin-left: 330px;
-                    margin-top: 10px;
-                }
+                // #payjp_checkout_box input[type=button]{
+                    // align-items: center;
+                    // color: #3DAD88;
+                    // background: transparent;
+                    // border: 1px solid $note;
+                    // border-radius: 4px;
+                    // line-height: 1;
+                    // padding: 0.5em 0.8em;
+                    // font-size: 14px;
+                    // margin-left: 330px;
+                    // margin-top: 10px;
+                    // width: auto;
+                    // height: auto;
+                // }
                 // .fee{
                 //     align-items: center;
                 //     color: #3DAD88;
@@ -94,7 +95,8 @@
                 }
                 .timeline-image {
                     width: 100%;
-                    height: auto;
+                    max-height: 300px;
+                    object-fit: cover;
                 }
                 .feeds-eyecatchimage-photo{
                     height: 160px;
@@ -145,6 +147,127 @@
           }
       }
     }
+
+
+
+
+    .note-paywall{
+        width: 100%;
+        height: auto;
+        margin: 35px 0;
+        border: 3px solid #e1e5e7;
+    }
+      .note-paywall-container{
+
+        &__header{
+            text-align: center;
+            padding: 40px 80px 0 80px;
+            font-weight: bold;
+        }
+        &__buynote{
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 1;
+            text-align: center;
+            // margin-top: 25px;
+        }
+        &__buynote::before{
+        content: "";
+        display: block;
+        border-top: solid 1px #efefef;
+        width: 100%;
+        height: 1px;
+        position: relative;
+        top: 50%;
+        z-index: 1;
+        margin-bottom: 10px;
+        text-align: center;
+        }
+        span{
+            text-align: center;
+            background: #fff;
+            padding: 0 15px;
+            position: relative;
+            z-index: 5;
+            top: -1.4em;
+        }
+        &__main{
+        align-items: center;
+        border-radius: 4px !important;
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+        border: 1px solid #efefef;
+        background: #f8f9fa;
+        text-align: left;
+        display: flex;
+        }
+        .buynote-eyecatchimage{
+        width: 72px;
+        height: 60px;
+        overflow: hidden;
+        margin-right: 10px;
+        }
+        .buynote-list{
+            height: 60px;
+            .buynote-title{
+                max-width: 200px;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 1;
+                margin-bottom: 10px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                }
+            .buynote-nickname{
+                font-size: 12px;
+                line-height: 1;
+                margin-bottom: 10px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+            .buynote-fee{
+                font-size: 12px;
+                font-weight: bold;
+                line-height: 1;
+            }
+            .buynote-btn-class{
+                margin-left: auto;
+                padding-left: 10px;
+                border-left: 1px solid #efefef;
+                background: #41C9B4;
+                border: 1px solid #41C9B4;
+                color: #fff;
+                
+                #payjp_checkout_box input[type=button]{
+                margin-left: auto;
+                padding-left: 10px;
+                border-left: 1px solid #efefef;
+                background: #41C9B4;
+                border: 1px solid #41C9B4;
+                color: red;
+                }
+            }
+        }
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
         &__foot{
             margin-top: 40px;
             padding: 12px 0 15px 0;

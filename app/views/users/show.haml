@@ -47,42 +47,39 @@
   .pageContainer
     .pageContainer__main
 
-
 - @notes.each do |note|
   .feeds
-    .feeds__header
-      %ul.feed-header-icon
-        %li.feed-avator
-          - if @user.image.present?
-            = image_tag "#{@user.image}", class: "feed-avator"
-          -else
-            = image_tag "http://1.bp.blogspot.com/-OwZV0x1FJrs/UNQrdb_uppI/AAAAAAAAI7U/-iJhiSxVI7Q/s1600/mark_face_smile.png", class: "feed-avator"
-          %li.user-name
+    .feeds-container
+      .feeds-container__header
+        .feeds-header-icon
+          .user-icon
             - if @user.image.present?
+              = image_tag "#{@user.image}", class: "feeds-avator"
+            -else
+              = image_tag "http://1.bp.blogspot.com/-OwZV0x1FJrs/UNQrdb_uppI/AAAAAAAAI7U/-iJhiSxVI7Q/s1600/mark_face_smile.png", class: "feeds-avator"
+          .note-profile-list
+            .user-name
+              - if @user.nickname.present?
+                .p
+                  = @user.nickname
+              - else
+                New user
+            .time-zone
               .p
-                = @user.nickname
-            - else
-              New user
-          / %li.time-zone
-          /   .p 2017年7月31日
-        %li.fee
-          - if note.fee.present?
-            ¥
-            = note.fee
-          - else
-            = image_tag "", class: "note-price-input-invisible"
+                = note.created_at.strftime("%Y年%m月%d日")
+          = form_tag(action: :purchase, method: :post) do
+            %script.payjp-button{"data-key" => "#{PAYJP_PUBLIC_KEY}", :src => "https://checkout.pay.jp", :type => "text/javascript","data-text" => "500円"}
 
-      .feeds__image
+      .feeds-container__image
         - if note.eyecatchimage.present?
-          = image_tag "#{note.eyecatchimage}", class: "feeds-eyecatchimage-photo"
-        / , class: "timeline-image"
-      .feeds__title
+          =image_tag "#{note.eyecatchimage}", class: "timeline-image"
+      .feeds-container__title
         = note.title
-      .feeds__body
+      .feeds-container__body
         .body-text
           = note.body
-        / .read-more
-        /   もっと見る
+        .read-more
+          = link_to "もっと見る", note_path(note.id)
         .hashtag
           %ul
             %li.hashtag-list
@@ -90,7 +87,7 @@
             %li.hashtag-list
               でもview大事
 
-      .feeds__foot
+      .feeds-container__foot
         .foot-action
           %ul
             %li
@@ -99,4 +96,5 @@
             %li
               .share-button
                 = fa_icon "fa-share-square",class: "fa fa-share-square"
+
 

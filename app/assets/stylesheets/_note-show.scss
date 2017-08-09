@@ -1,29 +1,14 @@
 .note-show{
   background-color: #white;
   width: 100vw;
-
+.note-show-header{
+  box-shadow: 0 0 1px rgba(0,0,0,0.15);
+}
 .note-show-container{
   background-color: $white;
 }
 
-.note-show-footer{
-    height: 50px;
-    &__container{
-        width: 100%;
-        margin: 0 auto;
-        height:50px;
-        // padding: 40px 0 40px 0;
-        ul{
-            width: 100%;
-        text-align: center;
-        line-height: 50px;
-        color: #ccc;
-        font-size: 12px;
-        }
-        li{
-            display: inline-block;
-            padding-right: 10px;
-        }
-    }
-}
+
+
+
 }

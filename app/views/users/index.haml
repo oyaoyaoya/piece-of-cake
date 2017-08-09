@@ -1,75 +1,74 @@
-.body
-  .header
-    = render "shared/header"
-  .creator
-    .creator__topImage
-      =image_tag "https://metaphysicstsushin.files.wordpress.com/2016/03/matrix-wallpaper.jpg", class: "creator-topImage"
-    .creator__content
-      .creator__avator
-        = image_tag "https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/4736047/profile_2538ba870146020f481dac42244d9045.jpg", class: "profile-avator"
-      .contentInner
-        .creator-nameID
-          = @user.nickname
-        .creator-edit-btn
-          設定
-        .creator-list
-          %ul
-            %li
-              .creator__follow
-                2フォロワー
-            %li
-              .creator__follower
-                2フォロー
-              .creator__facebook
-  .customNav
-    .customNav__inner
-      .customNav__nav
-        %ul
-          %li
-            .p ホーム
-          %li
-            .p マガジン
-            .creator-home-btn
-            .creator-magazine
-  .pageContainer
-    .pageContainer__main
+/ .body
+/   .header
+/     = render "shared/header"
+/   .creator
+/     .creator__topImage
+/       =image_tag "https://metaphysicstsushin.files.wordpress.com/2016/03/matrix-wallpaper.jpg", class: "creator-topImage"
+/     .creator__content
+/       .creator__avator
+/         = image_tag "https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/4736047/profile_2538ba870146020f481dac42244d9045.jpg", class: "profile-avator"
+/       .contentInner
+/         .creator-nameID
+/           = @user.nickname
+/         .creator-edit-btn
+/           設定
+/         .creator-list
+/           %ul
+/             %li
+/               .creator__follow
+/                 2フォロワー
+/             %li
+/               .creator__follower
+/                 2フォロー
+/               .creator__facebook
+/   .customNav
+/     .customNav__inner
+/       .customNav__nav
+/         %ul
+/           %li
+/             .p ホーム
+/           %li
+/             .p マガジン
+/             .creator-home-btn
+/             .creator-magazine
+/   .pageContainer
+/     .pageContainer__main
 
-.feeds
-  .feeds__header
-    - @notes.each do |note|
-      %ul.feed-header-icon
-        %li.user-icon
-          = image_tag "https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/3958988/profile_4428159bbd5d3e235bf471ab29dddce6.jpg", class: "feed-avator"
-          %li.user-name
-            .p 服部半蔵
-          / %li.time-zone
-          /   .p 2017年7月31日
-        %li.fee
-          ￥500
+/ / .feeds
+/ /   .feeds__header
+/ /     - @notes.each do |note|
+/ /       %ul.feed-header-icon
+/ /         %li.user-icon
+/ /           = image_tag "https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/3958988/profile_4428159bbd5d3e235bf471ab29dddce6.jpg", class: "feed-avator"
+/ /           %li.user-name
+/ /             .p 服部半蔵
+/ /           / %li.time-zone
+/ /           /   .p 2017年7月31日
+/ /         %li.fee
+/ /           ￥500
     
-    .feeds__image
-      / = note.eyecatchimage
-      / , class: "timeline-image"
-    .feeds__title
-      / = note.title
-    .feeds__body
-      .body-text
-        / = note.body
-      .read-more
-        もっと見る
-      .hashtag
-        %ul
-          %li.hashtag-list
-            view早く終わらしたい
-          %li.hashtag-list
-            でもview大事
+/ /     .feeds__image
+/ /       = note.eyecatchimage, class: "timeline-image"
+/ /     .feeds__title
+/ /       = note.title
+/ /     .feeds__body
+/ /       .body-text
+/ /         = note.body
+/ /       .read-more
+/ /         もっと見る
+/ /       .hashtag
+/ /         %ul
+/ /           %li.hashtag-list
+/ /             view早く終わらしたい
+/ /           %li.hashtag-list
+/ /             でもview大事
 
-    .feeds__foot
-      .foot-action
-        %ul
-          %li
-            .like-button
-              = fa_icon "icon-star-empty", text: "9", class: "fa fa-star-o"
-          %li
-            .share-button
-              = fa_icon "fa-share-square",class: "fa fa-share-square"
+/ /     .feeds__foot
+/ /       .foot-action
+/ /         %ul
+/ /           %li
+/ /             .like-button
+/ /               = fa_icon "icon-star-empty", text: "9", class: "fa fa-star-o"
+/ /           %li
+/ /             .share-button
+/ /               = fa_icon "fa-share-square",class: "fa fa-share-square"

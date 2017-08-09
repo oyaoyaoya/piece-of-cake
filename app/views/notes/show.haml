@@ -5,29 +5,36 @@
     .under-header
     .note-show-container
       .note-show-container-rend
-        = render "shared/feeds"
-    .note-container__popular
-    .note-container__page-link
-    .note-container__popular
-    .note-container__user-info
+        - if @note.fee.present?
+          = render "shared/note-limitedshow"
+        -else
+          = render "shared/feeds"
+    .note-show__popular
+    .note-show__page-link
+    .note-show__popular
+    .note-show__user-info
+    
+
+
   .note-show-footer
-    .note-show-footer__container
-      %ul
-        %li
-          noteプレミアム
-        %li
-          クリエーターの方へ
-        %li
-          よくある質問
-        %li
-          使い方
-        %li
-          プライバシー
-        %li
-          ご利用規約
-        %li
-          運営会社
-        %li
-          採用情報
-        %li
-          運営へのお問い合わせ
+    = render "shared/footer"
+    / .note-show-footer__container
+    /   %ul
+    /     %li
+    /       noteプレミアム
+    /     %li
+    /       クリエーターの方へ
+    /     %li
+    /       よくある質問
+    /     %li
+    /       使い方
+    /     %li
+    /       プライバシー
+    /     %li
+    /       ご利用規約
+    /     %li
+    /       運営会社
+    /     %li
+    /       採用情報
+    /     %li
+    /       運営へのお問い合わせ
