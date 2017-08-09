@@ -197,6 +197,7 @@
         max-width: 450px;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 20px;
         padding: 10px;
         border: 1px solid #efefef;
         background: #f8f9fa;
@@ -241,8 +242,8 @@
                 background: #41C9B4;
                 border: 1px solid #41C9B4;
                 color: #fff;
-                
-                #payjp_checkout_box input[type=button]{
+                }
+                .buynote-btn-class#payjp_checkout_box input[type=button]{
                 margin-left: auto;
                 padding-left: 10px;
                 border-left: 1px solid #efefef;
@@ -250,12 +251,7 @@
                 border: 1px solid #41C9B4;
                 color: red;
                 }
-            }
         }
-
-
-
-
         }
 
 

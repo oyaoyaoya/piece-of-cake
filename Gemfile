@@ -64,6 +64,7 @@ end
   gem 'devise'
   gem 'unicorn'
   gem 'payjp'
+  gem 'social-share-button'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

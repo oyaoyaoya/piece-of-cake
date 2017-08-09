@@ -12,6 +12,7 @@ $(document).ready(function () {
 
     var img = '<div class="img_view"><img alt="" class="img"></div>';
 
+    $(".image-insert").empty();
     $(".image-insert").append(img);
 
     filereader.onload = function() {
