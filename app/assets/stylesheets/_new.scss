@@ -63,20 +63,38 @@
     display: none;
   }
   .insert-label{
-    font-size: 30px;
+    font-size: 50px;
     z-index: 1;
     float: left;
-    color: #fff;
-    padding-left: 13px;
-    padding-top: 3px;
+    color: $black;
+    padding-left: 285px;
+    padding-top: 55px;
   }
-  .label-circle{
-    background-color: gray;
-    height: 50px;
-    width: 50px;
-    z-index: -1;
-    border-radius: 100%;
+  .image-insert{
+    width: 630px;
+    height: 200px;
+    opacity: .8;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    position: relative;
   }
+  .img{
+    height: 200px;
+    width: 630px;
+  }
+  // .label-circle{
+  //   background-color: gray;
+  //   float: left;
+  //   height: 50px;
+  //   width: 50px;
+  //   z-index: 2;
+  //   border-radius: 100%;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  // }
   ::-webkit-input-placeholder{
     color: #ccc;
     top: 0;

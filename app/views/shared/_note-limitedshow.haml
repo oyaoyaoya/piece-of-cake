@@ -1,12 +1,11 @@
-
-.feed-container
-  .feed-container__header
-    .feed-header-icon
+.feeds-container
+  .feeds-container__header
+    .feeds-header-icon
       .user-icon
         - if @note.user.image.present?
-          = image_tag "#{note.user.image}", class: "feed-avator"
+          = image_tag "#{note.user.image}", class: "feeds-avator"
         -else
-          = image_tag "http://1.bp.blogspot.com/-OwZV0x1FJrs/UNQrdb_uppI/AAAAAAAAI7U/-iJhiSxVI7Q/s1600/mark_face_smile.png", class: "feed-avator"
+          = image_tag "http://1.bp.blogspot.com/-OwZV0x1FJrs/UNQrdb_uppI/AAAAAAAAI7U/-iJhiSxVI7Q/s1600/mark_face_smile.png", class: "feeds-avator"
       .note-profile-list
         .user-name
           - if @note.user.nickname.present?
@@ -20,12 +19,12 @@
       / = form_tag(action: :purchase, method: :post) do
       /   %script.payjp-button{"data-key" => "#{PAYJP_PUBLIC_KEY}", :src => "https://checkout.pay.jp", :type => "text/javascript","data-text" => "500円"}
 
-  .feed-container__image
+  .feeds-container__image
     - if @note.eyecatchimage.present?
       =image_tag "#{@note.eyecatchimage}", class: "timeline-image"
-  .feed-container__title
+  .feeds-container__title
     = @note.title
-  .feed-container__body
+  .feeds-container__body
     .body-text
       = @note.body
     .note-paywall
@@ -58,7 +57,7 @@
         %li.hashtag-list
           でもview大事
 
-  .feed-container__foot
+  .feeds-container__foot
     .foot-action
       %ul
         %li

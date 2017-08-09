@@ -44,7 +44,7 @@ body{
     margin-right: auto;
     position: absolute;
     top: 30px;
-    left: 350px;
+    left: 650px;
     cursor: pointer;
     }
     .p{
@@ -66,7 +66,7 @@ body{
   }
   .profile-edit-avator{
     margin-right: 20px;
-   
+
   }
   .profile-avator{
     float: left;
@@ -85,7 +85,9 @@ body{
     top: 55px;
     font-size: 40px;
     color: $black;
+    opacity: .75;
     cursor: pointer;
+
   }
   .insert-image{
         display: none;

@@ -11,15 +11,14 @@
         .note-container
           .note-editor
             .image-insert
-              .label
-                = f.label :eyecatchimage, class: "insert-label" do
-                  = fa_icon "file-image-o"
-                = f.file_field :eyecatchimage, class: "insert-icon"
-              .label-circle
-              %h1
-                = f.text_field :title, placeholder: "ノートタイトル", class: "note-title"
-              .label
-                = f.text_area :body, placeholder: "ノート本文", class: "note-body"
+              = f.label :eyecatchimage, class: "insert-label" do
+                = fa_icon "file-image-o"
+              = f.file_field :eyecatchimage, class: "insert-icon"
+            .label-circle
+            %h1
+              = f.text_field :title, placeholder: "ノートタイトル", class: "note-title"
+            .label
+              = f.text_area :body, placeholder: "ノート本文", class: "note-body"
   #modal-overlay
   #modal-content
     .modal-content-header
