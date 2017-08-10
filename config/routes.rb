@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     end
   end
   resources :notes, only: [:index, :new, :update, :create, :show] do
+    resources :likes, only: [:create, :destroy]
     collection do
       post 'purchase'
     end

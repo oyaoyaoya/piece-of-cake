@@ -1,0 +1,15 @@
+- if user_signed_in?
+  - if @note.like_user(current_user.id)
+    = button_to note_like_path(id: @like.id, note_id: note.id), method: :delete, id: "like-button", remote: true do
+      = image_tag("icon_red_heart.svg")
+      %span
+        = note.like_count
+  - else
+    = button_to note_likes_path(note), id: "like-button", remote: true do
+      = image_tag("icon_heart.svg")
+      %span
+        = note.likes_count
+- else
+  = image_tag("icon_heart.svg")
+  %span
+    = note.like_count
