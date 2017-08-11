@@ -1,7 +1,7 @@
 class NotesController < ApplicationController
 
   def index
-    @like = Like.create(user_id: current_user.id, note_id: params[:id])
+    @likes = Like.where(like_id: params[:like_id])
     @notes = Note.order("created_at DESC")
   end
 
