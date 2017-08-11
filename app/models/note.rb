@@ -8,7 +8,7 @@ class Note < ApplicationRecord
 
   validates :title, presence: true
 
-  enum category: [:manga, :column, :novel, :music]
+  enum category: [recommend: 0, manga: 1, column: 2, novel: 3, music: 4]
 
   def like_user(user_id)
       likes.find_by(user_id: user_id)

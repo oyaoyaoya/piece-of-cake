@@ -1,7 +1,7 @@
 class NotesController < ApplicationController
 
   def index
-    @likes = Like.where(like_id: params[:like_id])
+    # @likes = Like.where(like_id: params[:like_id])
     @notes = Note.order("created_at DESC")
   end
 
@@ -28,6 +28,26 @@ class NotesController < ApplicationController
     Payjp::Charge.create(currency: 'jpy', amount: 1000, card: params['payjp-token'])
     redirect_to root_path, notice: "支払いが完了しました"
   end
+
+ def recommend
+  # @notes = Note.order("created_at DESC")
+  @notes = Note.where(category: 0)
+ end
+
+ def manga
+ end
+
+ def column
+ end
+
+ def novel
+ end
+
+ def photo
+ end
+
+ def music
+ end
 
   private
   def note_params

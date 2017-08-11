@@ -9,10 +9,9 @@ class LikesController < ApplicationController
     end
   end
 
-  def destory
-    binding.pry
+  def destroy
     like = Like.find_by(user_id: current_user.id, note_id: params[:note_id])
-    like.destory
+    like.destroy
     @likes = Like.where(note_id: params[:note_id])
     @notes = Note.all
     respond_to do |format|

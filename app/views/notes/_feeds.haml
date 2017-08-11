@@ -43,8 +43,8 @@
           %li
             .like-button
               - if user_signed_in?
-                - if note.like_user(current_user.id)
-                  = button_to note_like_path(@likes, note_id: note.id), method: :delete, id: "like-button", remote: true do
+                - if (like = note.like_user(current_user.id)).present?
+                  = button_to note_like_path(like, note_id: note.id), method: :delete, id: "like-button", remote: true do
                     = fa_icon "icon-star-empty", class: "fa fa-star-o"
                     %span
                       = note.likes_count
